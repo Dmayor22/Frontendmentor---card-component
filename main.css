@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card_image {
+    background-image: url("./images/image-product-mobile.jpg");
+    background-size: cover; /* fills the area */
+    background-position: center; /* centers the image */
+    background-repeat: no-repeat;
+}
+
+.card_image img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; /* makes sure the image fills its side */
+    visibility: hidden;
+}
+
+.content {
+    padding: 1.2rem;
+}
+
+.content h2,
+p,
+.price {
+    margin-top: 20px;
+}
+
+.perf {
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 0.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+}
+
+.price {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.price span {
+    color: hsl(158, 42%, 18%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.price .del {
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+
+.cta {
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    padding: 10px;
+    color: #fff;
+    text-align: centre;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-weight: 700;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cta:hover {
+    background-color: hsl(158, 42%, 18%);
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+    .card {
+        flex-direction: row;
+        width: 500px;
+    }
+    .card_image {
+        background-image: url("./images/image-product-desktop.jpg");
+        background-size: cover; /* fills the area */
+        background-position: center; /* centers the image */
+        background-repeat: no-repeat;
+
+        width: 100%;
+    }
+    .content {
+        flex: 1;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
